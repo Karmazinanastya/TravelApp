@@ -1,0 +1,48 @@
+﻿@model TravelApp.Models.DropDownModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Orders" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="clientId" class="control-label">Client</label>
+                @Html.DropDownListFor(x => x.clientId, new SelectList(Model.сlients, "Id", "FirstName"), "-- Select Client --", new { @class = "form-control" })
+                <span asp-validation-for="clientId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="hotelId" class="control-label">Hotel</label>
+                @Html.DropDownListFor(x => x.hotelId, new SelectList(Model.hotels, "Id", "Name"), "-- Select Hotel --", new { @class = "form-control" })
+                <span asp-validation-for="hotelId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="tourPackageId" class="control-label">Tour Package</label>
+                @Html.DropDownListFor(x => x.tourPackageId, new SelectList(Model.tourPackages, "Id", "Name"), "-- Select Tour Package --", new { @class = "form-control" })
+                <span asp-validation-for="tourPackageId" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Orders" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,74 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/*xxxxx*/
+
+
+/* Загальна стилізація */
+/* Стилізація заголовка "ЦЕ НЕ ПРОСТО УЯВА!" та зображення */
+h2 {
+    text-align: center;
+}
+
+.jpg {
+    display: block;
+    margin: 0 auto; 
+}
+
+/* Стилі для контейнера */
+.container {
+    max-width: 800px; 
+    margin: 0 auto;
+    
+}
+
+/* Стилі для футера */
+footer {
+    background-color: #D3D3D3;
+    padding: 5;
+    /*height: 50px*/
+}
+
+.contact-icons li {
+    margin-right: 30px;
+    font-size: 24px;
+    
+}
+
+.contact-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #000000;
+    padding: 20px;
+    margin-bottom: 800px;
+}
+
+
+@media (max-width: 768px) {
+    .adaptive-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 390px) {
+    .content-block h2 {
+        font-size: 18px; /* Зменшили розмір тексту для мобільних пристроїв */
+    }   
+}
+
